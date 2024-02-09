@@ -67,6 +67,7 @@ const ModulesSchema = new mongoose.Schema(
       type: Boolean,
     },
   },
+  
   { timestamps: true },
 );
 

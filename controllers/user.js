@@ -8,6 +8,7 @@ export const fetchUser = async (req, res, next) => {
   } catch (error) {
     next(error);
   }
+  
 };
 
 export const fetchUserbyId = async (req, res, next) => {

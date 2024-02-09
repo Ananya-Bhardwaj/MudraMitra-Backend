@@ -48,4 +48,6 @@ export const deleteMentor = async (req, res, next) => {
   } catch (e) {
     next(e);
   }
+  
 };
+

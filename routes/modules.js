@@ -1,6 +1,7 @@
 import express from 'express'; 
 import {fetchModules, fetchModulebyId , createModule,editModule,deleteModule} from '../controllers/modules.js'; 
 
+
 const router = express.Router(); 
 
 router.get('/', fetchModules);

@@ -22,7 +22,6 @@ const MentorSchema = new mongoose.Schema(
        type:Number,
       required:true,
     },
-
    email:{
      type:string,
      required:true,
