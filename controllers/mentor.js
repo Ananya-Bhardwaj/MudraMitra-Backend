@@ -1,7 +1,7 @@
 import Mentor from "../models/mentor.js";
 import User from "../models/user.js";
 
-export const fetchmentor = async (req, res, next) => {
+export const fetchMentor = async (req, res, next) => {
   try {
     const mentor = await Mentor.find({});
     res.status(200).json(mentor);

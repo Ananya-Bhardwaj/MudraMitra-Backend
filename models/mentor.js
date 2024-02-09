@@ -14,21 +14,21 @@ const MentorSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    Age:{
-      type:Number,
-      required:true,
+    Age: {
+      type: Number,
+      required: true,
     },
-    Phoneno:{
-       type:Number,
-      required:true,
+    Phoneno: {
+      type: Number,
+      required: true,
     },
-   email:{
-     type:string,
-     required:true,
-   },
-    experience:{
-      type:string,
-      required:true
+    email: {
+      type: String,
+      required: true,
+    },
+    experience: {
+      type: String,
+      required: true,
     },
   },
   { timestamps: true },
