@@ -1,5 +1,5 @@
 import User from "../models/user.js";
-const register=async (req , res)=>{
+const login=async (req , res)=>{
   try{
     const {email , password}=req.body;
     const userExist= await User.findone({ email });
@@ -21,4 +21,4 @@ const register=async (req , res)=>{
   }
   
 }
-module.exports={'register'}
+module.exports={'login'}
