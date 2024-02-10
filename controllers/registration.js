@@ -1,3 +1,4 @@
+import User from "../models/user.js";
 const register=async (req , res)=>{
   try{
     const {email , password}=req.body;
