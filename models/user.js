@@ -1,3 +1,4 @@
+import { ObjectId } from "bson";
 import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
@@ -14,6 +15,14 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  modulesCompleted: [
+    {
+      module: {
+        type: ObjectId, 
+        ref: "Modules"
+      }
+    }
+  ]
   
 });
 
