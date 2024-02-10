@@ -25,7 +25,7 @@ app.use("/api/quiz", quizRouter);
 app.use("/api/user", userRouter);
 app.use("/api/modules", modulesRouter);
 app.use("/api/mentor", mentorRouter);
-app.use("/api/registration,registrationRouter);
+app.use("/api/registration",registrationRouter);
 
 connectDb().then(() => {
   app.listen(5500, () => {
