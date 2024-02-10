@@ -1,30 +1,29 @@
 import mongoose from "mongoose";
-
 const MentorSchema = new mongoose.Schema(
   {
     Name: {
       type: String,
       required: true,
     },
-    /*Qualification: {
-      type: String,
-      required: false,
-    },*/
+    Img: {
+      type: String, 
+      required: true, 
+    },
     Specialization: {
       type: String,
       required: true,
     },
+    Description: {
+      type: String, 
+    },
     Age: {
       type: Number,
-      required: true,
     },
     Phoneno: {
       type: Number,
-      required: true,
     },
     email: {
       type: String,
-      required: true,
     },
     experience: {
       type: String,
@@ -33,5 +32,4 @@ const MentorSchema = new mongoose.Schema(
   },
   { timestamps: true },
 );
-
 export default mongoose.model("Mentor", MentorSchema);
