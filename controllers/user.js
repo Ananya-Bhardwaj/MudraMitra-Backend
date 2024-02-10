@@ -3,7 +3,7 @@ import User from "../models/user.js";
 //this is user registration
 //This code checks for the user if he is already in the database 
 //then it shows already existed otherwise adds the user
-export const fetchUser = async (req, res, next) => {
+export const login  = async (req, res, next) => {
   try {
     const {name , email ,password}=req.body;
     // made some additions no deletions
