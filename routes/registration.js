@@ -4,7 +4,8 @@ import express from 'express';
 
 const router = express.Router(); 
 
-router.route("registration").post(authcontroller.login);
+router.route("registration").post(authcontroller.register
+                                 );
 
 /*router.get('/', fetchUser);
 router.get('/:id', fetchUserbyId );
