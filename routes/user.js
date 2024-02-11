@@ -1,10 +1,10 @@
 import express from 'express'; 
- const authcontroller= require('../controllers/user.js'); 
-
+ //const authcontroller= require(''); 
+import {login} from '../controllers/user.js'
 
 const router = express.Router(); 
 
-router.route("login").post(authcontroller.login);
+router.route("login").post(login);
 
 /*router.get('/', fetchUser);
 router.get('/:id', fetchUserbyId );
