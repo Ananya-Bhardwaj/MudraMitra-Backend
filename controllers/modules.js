@@ -13,11 +13,15 @@ export const fetchModules = async (req, res, next) => {
 export const fetchModulebyId = async (req, res, next) => {
   const { id } = req.params;
   try {
+    // if (!ObjectId.isValid(id)) {
+    //   return res.status(400).json({ message: "Invalid module ID" });
+    // }
     const module = await Modules.findById(id);
     if (!module) {
-      return res.status(404).json({ message: "module not found" });
+      return res.status(404).json({ message: "Module not found" });
     }
-    res.status(200).json(post);
+
+    res.status(200).json(module); // Changed 'post' to 'module'
   } catch (e) {
     next(e);
   }
