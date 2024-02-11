@@ -1,17 +1,27 @@
 
 import User from "../models/user.js";
-
-export const fetchUser = async (req, res, next) => {
+//this is user registration
+//This code checks for the user if he is already in the database 
+//then it shows already existed otherwise adds the user
+export const login  = async (req, res, next) => {
   try {
-    const user = await user.find({});
-    res.status(200).json(user);
+    const {name , email ,password}=req.body;
+    // made some additions no deletions
+    const userExist = await user.findOne({email});
+    if(userExist){
+      return res.status(400).json({msg:"Email already exists"});
+    }
+    const userCreated= await User.create({name , email ,password});
+    // above this line
+    res.status(200).json({msg:userCreated});
   } catch (error) {
     next(error);
   }
   
 };
 
-export const fetchUserbyId = async (req, res, next) => {
+
+/*export const fetchUserbyId = async (req, res, next) => {
   try {
     const User = await User.findById(req.params.id);
     if (!User) {
@@ -41,6 +51,7 @@ export const editUser = async (req, res, next) => {
   );
   res.status(200).json(updatedUser);
 };
+*/
 
 export const deleteUser = async (req, res, next) => {
   try {
@@ -50,3 +61,5 @@ export const deleteUser = async (req, res, next) => {
     next(e);
   }
 };
+
+
