@@ -11,8 +11,9 @@ export const fetchModules = async (req, res, next) => {
 };
 
 export const fetchModulebyId = async (req, res, next) => {
+  const { id } = req.params;
   try {
-    const module = await Modules.findById(req.params.id);
+    const module = await Modules.findById(id);
     if (!module) {
       return res.status(404).json({ message: "module not found" });
     }
