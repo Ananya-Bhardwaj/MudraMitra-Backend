@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(
   cors({
     origin:
-      "https://a1305015-b261-4376-be9b-862aa25e67ec-00-2vy6071yo9zgs.sisko.replit.dev/",
+      "https://a1305015-b261-4376-be9b-862aa25e67ec-00-2vy6071yo9zgs.sisko.replit.dev",
     credential: true,
   }),
 );
