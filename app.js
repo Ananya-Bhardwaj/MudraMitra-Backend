@@ -20,12 +20,14 @@ import userRouter from "./routes/user.js";
 import modulesRouter from "./routes/modules.js";
 import mentorRouter from "./routes/mentor.js";
 import registrationRouter from "./routes/registration.js";
+import postsRouter from "./routes/posts.js"; 
 
 app.use("/api/quiz", quizRouter);
 app.use("/api/user", userRouter);
 app.use("/api/modules", modulesRouter);
 app.use("/api/mentor", mentorRouter);
 app.use("/api/registration",registrationRouter);
+app.use("/api/posts", postsRouter); 
 
 connectDb().then(() => {
   app.listen(5500, () => {
