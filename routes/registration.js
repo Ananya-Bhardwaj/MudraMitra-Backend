@@ -4,8 +4,7 @@ import register from  '../controllers/registration.js'
 
 const router = express.Router(); 
 
-router.route("registration").post(register
-                                 );
+router.route("registration").post(register);
 
 /*router.get('/', fetchUser);
 router.get('/:id', fetchUserbyId );

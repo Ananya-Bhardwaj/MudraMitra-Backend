@@ -1,6 +1,6 @@
 import Questions from "../models/question.js";
 import Results from "../models/result.js";
-import questions, { answers } from "../database/data.js";
+// import questions, { answers } from "../database/data.js";
 
 /** get all questions */
 export async function getQuestions(req, res) {
@@ -14,10 +14,20 @@ export async function getQuestions(req, res) {
 
 /** insert all questinos */
 export async function insertQuestions(req, res) {
+  const {questions, answers} = req.body; 
   try {
-    Questions.insertMany({ questions, answers }, function (err, data) {
-      res.json({ msg: "Data Saved Successfully...!" });
-    });
+    Questions.insertMany({ questions, answers })
+    .then(
+      function () {
+        res.json({ msg: "Data Saved Successfully...!" });
+
+      }
+    )
+    .catch( 
+      function (err) {
+        res.json({ err });
+      }
+    ); 
   } catch (error) {
     res.json({ error });
   }
