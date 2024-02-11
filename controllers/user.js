@@ -51,6 +51,7 @@ export const editUser = async (req, res, next) => {
   );
   res.status(200).json(updatedUser);
 };
+*/
 
 export const deleteUser = async (req, res, next) => {
   try {
@@ -60,4 +61,5 @@ export const deleteUser = async (req, res, next) => {
     next(e);
   }
 };
-*/
+
+
